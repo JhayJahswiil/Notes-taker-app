@@ -1,0 +1,495 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #f2aa4cff;
+    --secondary-color: #101820ff;
+    --extra-color-1: #fff;
+    --extra-color-2: #000;
+}
+
+body{
+    background: var(--primary-color);
+    width: 100%;
+}
+
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 20px 40px;   
+}
+
+.title h2{
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--extra-color-1);
+}
+
+/* .title h2 a{
+    text-decoration: none;
+    
+} */
+
+.menu .light{
+    color: var(--extra-color-1);
+}
+
+.menu .dark{
+    color: var(--extra-color-2);
+    display: none;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--extra-color-1);
+    margin-top: 10px;
+    background-color: var(--extra-color-2);
+    padding: 7px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--extra-color-1);
+}
+
+.menu a:hover{
+    color: var(--extra-color-2);
+    background-color: var(--extra-color-1);
+}
+
+/* NOTES SECTION */
+
+#view-notes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.notes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 5px auto;
+}
+
+.note-content textarea{
+    width: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.note-content .text{
+    color: crimson;
+}
+
+/* when the attribute 'readonly' isn't present, give a color of black */
+.note-content .text:not(:read-only){
+    color: black;
+}
+
+.clear-all{
+    text-align: center;
+}
+
+.clear-all-button{
+    margin-top: 5px;
+    background-color: var(--extra-color-1);
+    padding: 10px 50px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+footer{
+    padding: 7px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 2%;
+}
+
+footer p{
+    text-align: center;
+    color: var(--extra-color-1);
+}
+
+/*  delete button from JS */
+
+.actions button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.actions button:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+@media screen and (max-width: 650px){
+
+#view-notes{
+    width: 100%;
+    margin-top: 50px;
+}   
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin: 10pxauto;
+}
+
+.note-content textarea{
+    width: 350px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.note-content input:focus{
+    outline: 2px solid bisque;
+}
+
+.actions{
+    display: flex;
+    gap: 6px;
+}
+
+.actions button{
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.clear-all-button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    
+}
+}
+
+
+@media screen and (max-width: 460px){
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 20px;
+    align-items: center; 
+    padding: 20px 40px;   
+}
+
+header h2{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    background-color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+#view-notes{
+    width: 100%;
+    margin-top: 50px;
+}   
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.note-content textarea{
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.note-content input:focus{
+    outline: 2px solid bisque;
+}
+
+.actions{
+    display: flex;
+    gap: 6px;
+}
+
+.actions button{
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer; 
+}
+
+.clear-all-button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    
+}
+}
+
+
+@media screen and (max-width: 375px){
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 20px;
+    align-items: center; 
+    padding: 20px 40px;   
+}
+
+header h2{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    background-color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+#view-notes{
+    width: 100%;
+    margin-top: 50px;
+}   
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.note-content textarea{
+    width: 280px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.note-content input:focus{
+    outline: 2px solid bisque;
+}
+
+.actions{
+    display: flex;
+    gap: 6px;
+}
+
+.actions button{
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.clear-all-button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+}
+
+
+@media screen and (max-width: 290px){
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 20px;
+    align-items: center; 
+    padding: 20px 40px;   
+}
+
+header h2{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    margin-top: 10px;
+    background-color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+#view-notes{
+    width: 100%;
+    margin-top: 40px;
+}   
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.note-content textarea{
+    width: 160px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.note-content input:focus{
+    outline: 2px solid bisque;
+}
+
+.actions{
+    display: flex;
+    gap: 6px;
+}
+
+.actions button{
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.clear-all-button{
+    margin-top: 20px;
+    background-color: white;
+    padding: 7px 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    
+}
+}
+
+
+@media screen and (max-width: 190px){
+header{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 20px;
+    align-items: center; 
+    padding: 20px 40px;   
+}
+
+header h2{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu a{
+    width: 100%;
+    text-decoration: none;
+    font-size: 7px;
+    color: white;
+    margin-top: 10px;
+    background-color: black;
+    padding: 4px 3px;
+    border-radius: 5px;
+}
+
+#view-notes{
+    width: 100%;
+    margin-top: 30px;
+}   
+
+.notes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.note-content textarea{
+    width: 120px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.note-content input:focus{
+    outline: 2px solid bisque;
+}
+
+.actions{
+    display: flex;
+    gap: 6px;
+}
+
+.actions button{
+    font-size: 8px;
+    padding: 2px 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.clear-all-button{
+    font-size: 8px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 7px 15px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    
+}
+}
